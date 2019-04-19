@@ -1,0 +1,61 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "gulp",
+            "type": "shell",
+            "args": [
+                "--gulpfile",
+                "gulpfile.js",
+                "build"
+            ],
+            "group": "build",
+            "presentation" : { "reveal": "silent" },
+            "problemMatcher": [
+                {
+                    "owner": "gulp-typescript",
+                    "fileLocation": [
+                        "relative",
+                        "${workspaceRoot}"
+                    ],
+                    "pattern": {
+                        "regexp": "(.*)\\((\\d*),(\\d*)\\): (error|warning) (.*)",
+                        "file": 1,
+                        "line": 2,
+                        "column": 3,
+                        "severity": 4,
+                        "message": 5
+                    }
+                }
+            ]
+        },
+        {
+            "label": "clean",
+            "command": "gulp",
+            "type": "shell",
+            "args": [
+                "--gulpfile",
+                "gulpfile.js",
+                "clean"
+            ],
+            "group": "build",
+            "presentation" : { "reveal": "silent" }
+        },
+        {
+            "label": "cleanAndBuild",
+            "command": "gulp",
+            "type": "shell",
+            "args": [
+                "--gulpfile",
+                "gulpfile.js",
+                "cleanAndBuild"
+            ],
+            "group": "build",
+            "presentation" : { "reveal": "silent" },
+            "problemMatcher": [
+                "$tsc-watch"
+            ]
+        }
+    ]
+}
