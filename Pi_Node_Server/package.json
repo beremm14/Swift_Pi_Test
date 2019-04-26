@@ -1,7 +1,7 @@
 {
-  "name": "ue02_typescript",
+  "name": "pi_server",
   "version": "0.0.1",
-  "description": "Typescript Programm FIVU",
+  "description": "Server for Communication with Swift App",
   "main": "main.js",
   "scripts": {
     "build": "echo \" Hat net hingehaut\"",
